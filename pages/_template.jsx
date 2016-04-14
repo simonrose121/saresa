@@ -36,7 +36,7 @@ module.exports = React.createClass({
                 <div className="footer-header" style={styles.footerHeader}>Saresa</div>
                 <Link to="/" style={styles.footerLinks}>Home</Link>
                 <Link to="/about/" style={styles.footerLinks}>About Me</Link>
-                <Link to="/presentations/" style={styles.footerLinks}>Presentations</Link>
+                <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
               </Span>
               <Span columns={3} style={styles.footerTrebble}>
                 <div className="footer-header" style={styles.footerHeader}></div>
@@ -90,6 +90,6 @@ const styles = {
     display: 'block',
     padding: '0 0 8px 0',
     textDecoration: 'none',
-    color: '#677c91',
+    color: '#677c91'
   }
 };
