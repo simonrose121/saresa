@@ -16,16 +16,16 @@ const Projects = () =>
           <h2>Projects</h2>
         </Span>
         <Span columns={3}>
-          <ProjectCard link="/projects/sample/" title="Sample" image="images/when-i-grow-up.jpg"/>
+          <ProjectCard link="/projects/sample/" title="Sample" />
         </Span>
         <Span columns={3}>
-          <ProjectCard link="/projects/sample/" title="Sample" image="images/when-i-grow-up.jpg"/>
+          <ProjectCard link="/projects/sample/" title="Sample" />
         </Span>
         <Span columns={3}>
-          <ProjectCard link="/projects/sample/" title="Sample" image="images/when-i-grow-up.jpg"/>
+          <ProjectCard link="/projects/sample/" title="Sample" />
         </Span>
         <Span columns={3} last={true}>
-          <ProjectCard link="/projects/sample/" title="Sample" image="images/when-i-grow-up.jpg"/>
+          <ProjectCard link="/projects/sample/" title="Sample" />
         </Span>
       </Grid>
     </Container>
