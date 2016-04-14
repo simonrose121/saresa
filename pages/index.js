@@ -52,6 +52,7 @@ const styles = {
     maxWidth: 1024,
     padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
     paddingTop: 0,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    minHeight: 600
   }
 };

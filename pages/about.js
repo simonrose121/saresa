@@ -23,7 +23,8 @@ const styles = {
     padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
     paddingTop: 0,
     marginTop: rhythm(1/2),
-    overflow: 'hidden'
+    overflow: 'hidden',
+    minHeight: 600
   }
 };
 
