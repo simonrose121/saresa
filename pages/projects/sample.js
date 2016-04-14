@@ -11,7 +11,7 @@ const Sample = () =>
       <Container className="default-container" style={styles.defaultContainer} >
         <Grid columns={12}>
           <Span columns={12} last={true}>
-            <h2>About Me</h2>
+            <h2>Sample Project</h2>
           </Span>
         </Grid>
       </Container>
