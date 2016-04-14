@@ -1,4 +1,3 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Saresa
 
-Install this starter (assuming Gatsby is installed) by running from your CLI: gatsby new gatsby-example-site
+A personal site.
