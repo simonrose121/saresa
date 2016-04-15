@@ -1,0 +1,7 @@
+.project-card {
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.24),0 2px 20px 0 rgba(0,0,0,.2) !important;
+    margin-top: -5px !important;
+    margin-bottom: 5px !important;
+  }
+}
