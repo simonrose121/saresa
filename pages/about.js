@@ -24,7 +24,7 @@ const styles = {
     paddingTop: 0,
     marginTop: rhythm(1/2),
     overflow: 'hidden',
-    minHeight: 600
+    minHeight: 650
   }
 };
 
