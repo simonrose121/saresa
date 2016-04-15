@@ -29,7 +29,7 @@ export default class Index extends React.Component {
           </Container>
         </Grid>
       </DocumentTitle>
-    )
+    );
   }
 }
 
