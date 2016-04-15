@@ -1,0 +1,22 @@
+$paragraphColour: #34495e;
+$strongColour: #2c3e50;
+$linkColour: #2980b9;
+$linkHoverColour: #8e44ad;
+
+p {
+  color: $paragraphColour;
+
+  strong {
+    color: $strongColour;
+  }
+
+  a {
+    color: $linkColour;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $linkHoverColour;
+    }
+  }
+}
