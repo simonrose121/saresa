@@ -14,6 +14,7 @@ module.exports = React.createClass({
     }
   },
   render () {
+    let copyright = `© ${new Date().getFullYear()} Rowell Heria`;
     return (
       <div>
         <Message type="info" text="This site is under development. Something will probably break."
@@ -31,20 +32,11 @@ module.exports = React.createClass({
         <footer>
           <Container style={styles.footerContainer} >
             <Container style={styles.footer}>
-              <Grid columns={12}>
-              <Span columns={3} style={styles.footerTrebble}>
-                <div className="footer-header" style={styles.footerHeader}>Saresa</div>
-                <Link to="/" style={styles.footerLinks}>Home</Link>
-                <Link to="/about/" style={styles.footerLinks}>About Me</Link>
-                <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
-              </Span>
-              <Span columns={3} style={styles.footerTrebble}>
-                <div className="footer-header" style={styles.footerHeader}></div>
-              </Span>
-              <Span columns={3} last={true} style={styles.footerTrebble}>
-                <div className="footer-header" style={styles.footerHeader}></div>
-              </Span>
-              </Grid>
+              <Link to="/" style={styles.footerLinks}>Home</Link>
+              <Link to="/about/" style={styles.footerLinks}>About Me</Link>
+              <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
+
+              <span className="copyright" style={{...styles.footerLinks, float: 'right'}}>{copyright}</span>
             </Container>
           </Container>
         </footer>
@@ -72,24 +64,14 @@ const styles = {
   footer: {
     maxWidth: 1024,
     paddingTop: 0,
-    padding: `${rhythm(2/3)} ${rhythm(2/3)}`
-  },
-  footerTrebble: {
+    padding: `${rhythm(2/3)} ${rhythm(2/3)}`,
     fontSize: 13,
-    lineHeight: '13px',
-    color: '#677c91',
     fontFamily: 'sans-serif'
   },
-  footerHeader: {
-    fontSize: 15,
-    lineHeight: '15px',
-    fontWeight: 'bold',
-    marginBottom: 10
-  },
   footerLinks: {
-    display: 'block',
-    padding: '0 0 8px 0',
+    display: 'inline-block',
     textDecoration: 'none',
-    color: '#677c91'
+    color: '#677c91',
+    marginRight: rhythm(2/3)
   }
 };
