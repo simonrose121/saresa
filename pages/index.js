@@ -1,6 +1,6 @@
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
-import { Container, Grid, Span } from 'react-responsive-grid';
+import { Breakpoint, Container, Grid, Span } from 'react-responsive-grid';
 import DocumentTitle from 'react-document-title';
 
 import templatedTitle from 'utils/titleHelper';
@@ -12,11 +12,20 @@ export default class Index extends React.Component {
       <DocumentTitle title={templatedTitle('Home')}>
         <Grid columns={12}>
           <Span columns={12}>
-            <section className="hero-container" style={styles.heroContainer}>
-              <Container className="hero" style={styles.hero} >
-                Sa-re-sa
-              </Container>
-            </section>
+            <Breakpoint minWidth={426} widthMethod="componentWidth">
+              <section className="hero-container" style={styles.heroContainer}>
+                <Container className="hero" style={styles.hero} >
+                  Software Engineer
+                </Container>
+              </section>
+            </Breakpoint>
+            <Breakpoint maxWidth={426} widthMethod="componentWidth">
+              <section className="hero-container" style={{...styles.heroContainer, ...styles.heroContainerSmall}}>
+                <Container className="hero" style={{...styles.hero, ...styles.heroSmall}} >
+                  Software Engineer
+                </Container>
+              </section>
+            </Breakpoint>
           </Span>
           <Container className="default-container" style={styles.defaultContainer} >
             <Grid columns={12}>
@@ -44,9 +53,18 @@ const styles = {
     alignItems: 'center',
     fontSize: '3em'
   },
+  heroContainerSmall: {
+    height: '200px',
+    fontSize: '2em'
+  },
+  heroSmall: {
+    lineHeight: '1.1em'
+  },
   hero: {
     maxWidth: 1024,
-    padding: `${rhythm(1/2)} ${rhythm(2/3)}`
+    padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
+    lineHeight: '1.5em',
+    textAlign: 'center'
   },
   defaultContainer: {
     maxWidth: 1024,
