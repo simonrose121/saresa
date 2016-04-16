@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Span } from 'react-responsive-grid';
+import { Breakpoint, Container, Grid, Span } from 'react-responsive-grid';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Headroom from 'react-headroom';
@@ -32,11 +32,27 @@ module.exports = React.createClass({
         <footer>
           <Container style={styles.footerContainer} >
             <Container style={styles.footer}>
-              <Link to="/" style={styles.footerLinks}>Home</Link>
-              <Link to="/about/" style={styles.footerLinks}>About Me</Link>
-              <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
+              <Grid columns={12}>
+                <Breakpoint minWidth={426} widthMethod="componentWidth">
+                  <Span columns={12}>
+                    <Link to="/" style={styles.footerLinks}>Home</Link>
+                    <Link to="/about/" style={styles.footerLinks}>About Me</Link>
+                    <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
 
-              <span className="copyright" style={{...styles.footerLinks, float: 'right'}}>{copyright}</span>
+                    <span className="copyright" style={{...styles.footerLinks, float: 'right'}}>{copyright}</span>
+                  </Span>
+                </Breakpoint>
+                <Breakpoint maxWidth={425} widthMethod="componentWidth">
+                  <Span columns={12}>
+                    <Link to="/" style={styles.footerLinks}>Home</Link>
+                    <Link to="/about/" style={styles.footerLinks}>About Me</Link>
+                    <Link to="/projects/" style={styles.footerLinks}>Projects</Link>
+                  </Span>
+                  <Span columns={12}>
+                    <span className="copyright" style={{...styles.footerLinks}}>{copyright}</span>
+                  </Span>
+                </Breakpoint>
+              </Grid>
             </Container>
           </Container>
         </footer>
