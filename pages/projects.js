@@ -16,16 +16,7 @@ const Projects = () =>
           <h2>Projects</h2>
         </Span>
         <Span columns={3}>
-          <ProjectCard link="/projects/timetabled/" title="timetabled" />
-        </Span>
-        <Span columns={3}>
-          <ProjectCard link="/projects/sample/" title="Sample" />
-        </Span>
-        <Span columns={3}>
-          <ProjectCard link="/projects/sample/" title="Sample" />
-        </Span>
-        <Span columns={3} last={true}>
-          <ProjectCard link="/projects/sample/" title="Sample" />
+          <ProjectCard link="/projects/timetabled/" title="timetabled" status="DONE" />
         </Span>
       </Grid>
     </Container>
