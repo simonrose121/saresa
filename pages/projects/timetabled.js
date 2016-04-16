@@ -13,18 +13,17 @@ import Schema from './_snippets/_timetabled-response-schema.md';
 
 export default class ProjectsTimetabled extends React.Component {
   render () {
-    console.log(Schema);
     return (
-      <DocumentTitle title={templatedTitle('timetabled - Projects')}>
+      <DocumentTitle title={templatedTitle('Timetabled - Projects')}>
         <Container className="default-container" style={styles.defaultContainer} >
           <Grid columns={12}>
-            <h2>timetabled</h2>
+            <h2>Timetabled</h2>
 
-            <p><strong>timetabled</strong> is an API that provides bus/tram times for South Yorkshire. It requires the <a href="https://data.gov.uk/dataset/naptan">NaPTAN</a> code of the stop and should return a JSON object with the details. The response you will receive will look like something below.</p>
+            <p><strong>Timetabled</strong> is an API that provides bus/tram times for South Yorkshire. It requires the <a href="https://data.gov.uk/dataset/naptan">NaPTAN</a> code of the stop and should return a JSON object with the details. The response you will receive will look like something below.</p>
 
             <div dangerouslySetInnerHTML={{__html: Schema.body}}></div>
 
-            
+
           </Grid>
         </Container>
       </DocumentTitle>
@@ -39,6 +38,6 @@ const styles = {
     paddingTop: 0,
     marginTop: rhythm(1/2),
     overflow: 'hidden',
-    minHeight: 650
+    minHeight: '100vh'
   }
 };

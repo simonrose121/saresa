@@ -6,26 +6,19 @@ import DocumentTitle from 'react-document-title';
 import templatedTitle from 'utils/titleHelper';
 import { rhythm } from 'utils/typography';
 
+import '../css/hero.scss';
+
 export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={templatedTitle('Home')}>
         <Grid columns={12}>
           <Span columns={12}>
-            <Breakpoint minWidth={426} widthMethod="componentWidth">
-              <section className="hero-container" style={styles.heroContainer}>
-                <Container className="hero" style={styles.hero} >
-                  Software Engineer
-                </Container>
-              </section>
-            </Breakpoint>
-            <Breakpoint maxWidth={426} widthMethod="componentWidth">
-              <section className="hero-container" style={{...styles.heroContainer, ...styles.heroContainerSmall}}>
-                <Container className="hero" style={{...styles.hero, ...styles.heroSmall}} >
-                  Software Engineer
-                </Container>
-              </section>
-            </Breakpoint>
+            <section className="hero-container" style={styles.heroContainer}>
+              <Container className="hero" style={styles.hero} >
+                Software Engineer
+              </Container>
+            </section>
           </Span>
           <Container className="default-container" style={styles.defaultContainer} >
             <Grid columns={12}>
@@ -71,6 +64,6 @@ const styles = {
     padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
     paddingTop: 0,
     overflow: 'hidden',
-    minHeight: 650
+    minHeight: '100vh'
   }
 };
