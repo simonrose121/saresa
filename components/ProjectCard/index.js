@@ -3,8 +3,9 @@ import { Link } from 'react-router';
 
 import './styles.scss';
 
-const ProjectCard = ({ link, title, image, containerStyle }) =>
+const ProjectCard = ({ link, title, image, status, statusType, containerStyle }) =>
   <Link to={link} className="project-card" style={{ ...styles.projectCard, ...containerStyle }} >
+    { status && <span className={`status ${statusType}`}>{status}</span> }
     <div className="image"
          style={{ background: `url(${image || 'images/placeholder.png'}) center center`, ...styles.projectImage }}></div>
     <div className="title" style={styles.projectTitle}>
@@ -26,7 +27,8 @@ const styles = {
     background: '#ffffff',
     boxShadow: '0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)',
     textDecoration: 'none',
-    transition: 'all 0.3s ease'
+    transition: 'all 0.3s ease',
+    position: 'relative'
   },
   projectImage: {
     backgroundSize: 'cover',
