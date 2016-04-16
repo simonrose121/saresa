@@ -22,7 +22,7 @@ module.exports = React.createClass({
         <Headroom style={{ background: '#e74c3c' }} disable={true}>
           <Container style={styles.headroomLinkContainer} >
             <Link to={prefixLink('/')} style={styles.headeroomLink} >
-              Saresa
+              Rowell Heria
             </Link>
           </Container>
         </Headroom>
