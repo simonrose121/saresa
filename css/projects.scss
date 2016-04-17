@@ -2,6 +2,8 @@ $paragraphColour: #34495e;
 $strongColour: #2c3e50;
 $linkColour: #2980b9;
 $linkHoverColour: #8e44ad;
+$inlineCodeColour: #cc9393;
+$inlineCodeBackgroundColour: #3f3f3f;
 
 p {
   color: $paragraphColour;
@@ -18,5 +20,9 @@ p {
     &:hover {
       color: $linkHoverColour;
     }
+  }
+
+  code {
+    color: $inlineCodeColour;
   }
 }
