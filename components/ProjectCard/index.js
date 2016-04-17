@@ -7,7 +7,7 @@ const ProjectCard = ({ link, title, image, status, statusType, containerStyle })
   <Link to={link} className="project-card" style={{ ...styles.projectCard, ...containerStyle }} >
     { status && <span className={`status ${statusType}`}>{status}</span> }
     <div className="image"
-         style={{ background: `url(${image || 'images/_placeholder.svg'}) center center`, ...styles.projectImage }}></div>
+         style={{ background: `url(${image || 'images/placeholder.svg'}) center center`, ...styles.projectImage }}></div>
     <div className="title" style={styles.projectTitle}>
       {title}
     </div>
