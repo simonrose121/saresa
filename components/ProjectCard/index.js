@@ -28,7 +28,8 @@ const styles = {
     boxShadow: '0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)',
     textDecoration: 'none',
     transition: 'all 0.3s ease',
-    position: 'relative'
+    position: 'relative',
+    marginBottom: '0.75rem'
   },
   projectImage: {
     backgroundSize: 'cover',

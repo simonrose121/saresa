@@ -21,9 +21,17 @@ module.exports = React.createClass({
           containerStyle={{ textAlign: 'center', background: '#ffe32e' }}/>
         <Headroom style={{ background: '#e74c3c' }} disable={true}>
           <Container style={styles.headroomLinkContainer} >
-            <Link to={prefixLink('/')} style={styles.headeroomLink} >
+            <Link to={prefixLink('/')} style={styles.headroomLink} >
               Rowell Heria
             </Link>
+            <div style={{ float: 'right' }}>
+              <Link to={prefixLink('/about/')} style={{...styles.headroomLink, ...styles.headroomLinkSmall}} >
+                About Me
+              </Link>
+              <Link to={prefixLink('/projects/')} style={{...styles.headroomLink, ...styles.headroomLinkSmall}} >
+                Projects
+              </Link>
+            </div>
           </Container>
         </Headroom>
         <Container style={{ maxWidth: '100%' }} >
@@ -67,11 +75,15 @@ const styles = {
     paddingTop: 0,
     padding: `${rhythm(2/3)} ${rhythm(2/3)}`
   },
-  headeroomLink: {
+  headroomLink: {
     color: 'white',
     textDecoration: 'none',
     fontFamily: '"Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif',
     fontSize: '25px'
+  },
+  headroomLinkSmall: {
+    fontSize: '15px',
+    marginLeft: rhythm(2/3)
   },
   footerContainer: {
     maxWidth: '100%',
