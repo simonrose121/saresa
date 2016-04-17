@@ -79,7 +79,8 @@ const styles = {
     color: 'white',
     textDecoration: 'none',
     fontFamily: '"Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif',
-    fontSize: '25px'
+    fontSize: '25px',
+    fontWeight: 'normal'
   },
   headroomLinkSmall: {
     fontSize: '15px',
