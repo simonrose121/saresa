@@ -31,7 +31,7 @@ export default class ProjectsTimetabled extends React.Component {
             
             <p>Using <a href="https://babeljs.io/">Babel</a>, I am able to use next generation JavaScript. In production, we just require <code>babel-core/register</code> to handle all the magic of trnaspilling. However, the <a href="https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/user-handbook.md#toc-babel-register">documentation</a> notes that this should not be done in production. To solve this issue, we use webpack to transpile the code! More magic.</p>
 
-            <p>If you look at the <a href="https://github.com/rowell68/timetabled">code</a>, you might notice references to <a href="https://market.mashape.com/">Mashape</a>. Instead of building my own implementation of monitoring and authentication, I opted to use Mashape's marketplace. I just need to deploy and instance of this API and point Mashape to and, et voilà, sorted!</p>
+            <p>If you look at the <a href="https://github.com/rowellx68/timetabled">code</a>, you might notice references to <a href="https://market.mashape.com/">Mashape</a>. Instead of building my own implementation of monitoring and authentication, I opted to use Mashape's marketplace. I just need to deploy and instance of this API and point Mashape to and, et voilà, sorted!</p>
 
             <p>Deploying your own instance of the API will require some modifications. You will just need to remove the references to Mashape. You will need to first replace the Dockerfile with the one below.</p>
 
@@ -41,7 +41,7 @@ export default class ProjectsTimetabled extends React.Component {
 
             <div dangerouslySetInnerHTML={{__html: SrcUtilsIndex.body}}></div>
 
-            <p>The repository can be found <a href="https://github.com/rowell68/timetabled">here</a>. Issues, questions, and PR's are welcome!</p>
+            <p>The repository can be found <a href="https://github.com/rowellx68/timetabled">here</a>. Issues, questions, and PR's are welcome!</p>
           </Grid>
         </Container>
       </DocumentTitle>
