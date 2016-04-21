@@ -9,6 +9,25 @@
   }
 }
 
+.language-blurb {
+  font-size: 1.8em;
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 1rem;
+  color: lighten(#34495e, 20%);
+  padding: 0 50px;
+
+  @media only screen and (max-width: 425px) {
+    font-size: 1.4em;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.6em;
+    padding: 0;
+  }
+}
+
 .index-languages {
   .language {
     text-align: center;
@@ -16,7 +35,7 @@
     font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 2em;
     line-height: normal;
-    padding: 45px 20px;
+    padding: 45px 10px;
     border-radius: 2px;
     margin-bottom: 1.69492%;
 
@@ -24,12 +43,16 @@
       font-size: 1.5em;
     }
 
+    @media only screen and (max-width: 600px) {
+      font-size: 1.6em;
+    }
+
     &.dot-net {
       background: #8e44ad;
     }
 
     &.html {
-      background: #2980b9;
+      background: #3498db;
     }
 
     &.css {

@@ -20,6 +20,9 @@ export default class Index extends React.Component {
           </section>
         </Span>
         <Container className="default-container" style={styles.defaultContainer} >
+          <div className="language-blurb">
+            Below are some of the languages I have professional experience in.
+          </div>
           <Grid columns={12} className="index-languages">
             <Breakpoint minWidth={425} widthMethod="componentWidth">
               <Span columns={3} className="language dot-net">

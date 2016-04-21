@@ -27,7 +27,7 @@ module.exports = React.createClass({
             <Link to={prefixLink('/')} style={styles.headroomLink} >
               Rowell Heria
             </Link>
-            <div style={{ float: 'right' }}>
+            <div style={{ float: 'right' }} className="header-links">
               <Link to={prefixLink('/about/')} style={{...styles.headroomLink, ...styles.headroomLinkSmall}} >
                 About Me
               </Link>
