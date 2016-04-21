@@ -2,6 +2,7 @@ import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import { Container, Grid, Span } from 'react-responsive-grid';
 import DocumentTitle from 'react-document-title';
+import TagList from '../../components/TagList';
 
 import templatedTitle from 'utils/titleHelper';
 import { rhythm } from 'utils/typography';
@@ -20,10 +21,14 @@ export default class ProjectsTimetabled extends React.Component {
         <Container className="default-container" style={styles.defaultContainer} >
           <Grid columns={12}>
             <h2>Timetabled</h2>
+            
+            <TagList tags={['node.js', 'api']} />
 
             <p><strong>Timetabled</strong> is an API that provides bus/tram times for the Yorkshire region. It requires the <a href="https://data.gov.uk/dataset/naptan">NaPTAN</a> code of the stop and should return a JSON object with the details. The response you will receive will look like something below.</p>
 
             <div dangerouslySetInnerHTML={{__html: Schema.body}}></div>
+
+            <blockquote>You can preview the API through <a href="https://market.mashape.com/rowellx68/timetabled">Mashape</a>.</blockquote>
 
             <p>Instead of <a href="https://github.com/expressjs/express/issues/2844">Express</a>, it uses <a href="https://github.com/koajs/koa">Koa</a> for the web server. At its core, it does not bundle any middleware so you get to install <strong>only</strong> the ones you need. I only needed <a href="https://github.com/alexmingoia/koa-router">koa-router</a> and <a href="https://github.com/koajs/json">koa-json</a>.</p>
 
