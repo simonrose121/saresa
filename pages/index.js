@@ -12,7 +12,7 @@ export default class Index extends React.Component {
     return (
       <Grid columns={12}>
         <Helmet title="Home" />
-        <Span columns={12}>
+        <Span columns={12} last={true}>
           <section className="hero-container" style={styles.heroContainer}>
             <Container className="hero" style={styles.hero} >
               Software Engineer
@@ -20,12 +20,35 @@ export default class Index extends React.Component {
           </section>
         </Span>
         <Container className="default-container" style={styles.defaultContainer} >
-          <Grid columns={12}>
-            <Span columns={12} last={true}>
-              <section className="index-text">
-                <h2>Welcome intrepid travellers!</h2>
-              </section>
-            </Span>
+          <Grid columns={12} className="index-languages">
+            <Breakpoint minWidth={425} widthMethod="componentWidth">
+              <Span columns={3} className="language dot-net">
+                .NET
+              </Span>
+              <Span columns={3} className="language html">
+                HTML
+              </Span>
+              <Span columns={3} className="language css">
+                CSS
+              </Span>
+              <Span columns={3} last={true} className="language js">
+                JS
+              </Span>
+            </Breakpoint>
+            <Breakpoint maxWidth={425} widthMethod="componentWidth">
+              <Span columns={6} className="language dot-net">
+                .NET
+              </Span>
+              <Span columns={6} last={true} className="language html">
+                HTML
+              </Span>
+              <Span columns={6} className="language css">
+                CSS
+              </Span>
+              <Span columns={6} last={true} className="language js">
+                JS
+              </Span>
+            </Breakpoint>
           </Grid>
         </Container>
       </Grid>
@@ -37,7 +60,7 @@ const styles = {
   heroContainer: {
     background: '#ff6656',
     height: '250px',
-    marginBottom: rhythm(1/2),
+    marginBottom: '1rem',
     color: '#ffffff',
     display: 'flex',
     justifyContent: 'center',

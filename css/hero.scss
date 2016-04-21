@@ -8,3 +8,36 @@
     }
   }
 }
+
+.index-languages {
+  .language {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    line-height: normal;
+    padding: 45px 20px;
+    border-radius: 2px;
+    margin-bottom: 1.69492%;
+
+    @media only screen and (max-width: 425px) {
+      font-size: 1.5em;
+    }
+
+    &.dot-net {
+      background: #8e44ad;
+    }
+
+    &.html {
+      background: #2980b9;
+    }
+
+    &.css {
+      background: #e67e22;
+    }
+
+    &.js {
+      background: #f1c40f;
+    }
+  }
+}
