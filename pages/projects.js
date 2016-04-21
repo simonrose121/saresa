@@ -34,7 +34,7 @@ const Projects = () =>
         <Span columns={6}>
           <ProjectCard link="/projects/timetabled/" title="timetabled" statusType="done" status="DONE" />
         </Span>
-        <Span columns={6}>
+        <Span columns={6} last={true}>
           <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
         </Span>
       </Breakpoint>
