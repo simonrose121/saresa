@@ -37,6 +37,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build --prefix-links",
+    "build:serve": "npm run build && gatsby serve-build",
     "start": "gatsby develop"
   }
 }
