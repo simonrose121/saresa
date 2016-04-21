@@ -1,9 +1,8 @@
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import { Breakpoint, Container, Grid, Span } from 'react-responsive-grid';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 
-import templatedTitle from 'utils/titleHelper';
 import { rhythm } from 'utils/typography';
 
 import '../css/hero.scss';
@@ -11,26 +10,25 @@ import '../css/hero.scss';
 export default class Index extends React.Component {
   render () {
     return (
-      <DocumentTitle title={templatedTitle('Home')}>
-        <Grid columns={12}>
-          <Span columns={12}>
-            <section className="hero-container" style={styles.heroContainer}>
-              <Container className="hero" style={styles.hero} >
-                Software Engineer
-              </Container>
-            </section>
-          </Span>
-          <Container className="default-container" style={styles.defaultContainer} >
-            <Grid columns={12}>
-              <Span columns={12} last={true}>
-                <section className="index-text">
-                  <h2>Welcome intrepid travellers!</h2>
-                </section>
-              </Span>
-            </Grid>
-          </Container>
-        </Grid>
-      </DocumentTitle>
+      <Grid columns={12}>
+        <Helmet title="Home" />
+        <Span columns={12}>
+          <section className="hero-container" style={styles.heroContainer}>
+            <Container className="hero" style={styles.hero} >
+              Software Engineer
+            </Container>
+          </section>
+        </Span>
+        <Container className="default-container" style={styles.defaultContainer} >
+          <Grid columns={12}>
+            <Span columns={12} last={true}>
+              <section className="index-text">
+                <h2>Welcome intrepid travellers!</h2>
+              </section>
+            </Span>
+          </Grid>
+        </Container>
+      </Grid>
     );
   }
 }

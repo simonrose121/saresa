@@ -1,10 +1,9 @@
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import { Container, Grid, Span } from 'react-responsive-grid';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import TagList from '../../components/TagList';
 
-import templatedTitle from 'utils/titleHelper';
 import { rhythm } from 'utils/typography';
 
 import '../../css/zenburn.css';
@@ -13,15 +12,15 @@ import '../../css/projects.scss';
 export default class ProjectsTravl extends React.Component {
   render () {
     return (
-      <DocumentTitle title={templatedTitle('Travl - Projects')}>
-        <Container className="default-container" style={styles.defaultContainer} >
-          <Grid columns={12}>
-            <h2 style={styles.header}>Travl</h2>
+      <Container className="default-container" style={styles.defaultContainer} >
+        <Helmet title="Travl - Projects" />
+        
+        <Grid columns={12}>
+          <h2 style={styles.header}>Travl</h2>
 
-            <TagList tags={['react', 'react native', 'ios']} />
-          </Grid>
-        </Container>
-      </DocumentTitle>
+          <TagList tags={['react', 'react native', 'ios']} />
+        </Grid>
+      </Container>
     );
   }
 }

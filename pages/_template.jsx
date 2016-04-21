@@ -3,6 +3,7 @@ import { Breakpoint, Container, Grid, Span } from 'react-responsive-grid';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Headroom from 'react-headroom';
+import Helmet from 'react-helmet';
 
 import Message from '../components/Message';
 import { rhythm } from 'utils/typography';
@@ -17,6 +18,8 @@ module.exports = React.createClass({
     let copyright = `© ${new Date().getFullYear()} Rowell Heria`;
     return (
       <div>
+        <Helmet titleTemplate="%s | Rowell Heria" />
+
         <Message type="info" text="This site is under development. Something will probably break."
           containerStyle={{ textAlign: 'center', background: '#ffe32e' }}/>
         <Headroom style={{ background: '#e74c3c' }} disable={true}>

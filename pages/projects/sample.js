@@ -1,21 +1,20 @@
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import { Container, Grid, Span } from 'react-responsive-grid';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 
-import templatedTitle from 'utils/titleHelper';
 import { rhythm } from 'utils/typography';
 
 const Sample = () =>
-    <DocumentTitle title={templatedTitle('Sample')}>
-      <Container className="default-container" style={styles.defaultContainer} >
-        <Grid columns={12}>
-          <Span columns={12} last={true}>
-            <h2>Sample Project</h2>
-          </Span>
-        </Grid>
-      </Container>
-    </DocumentTitle>;
+  <Container className="default-container" style={styles.defaultContainer} >
+    <Helmet title="Sample" />
+
+    <Grid columns={12}>
+        <Span columns={12} last={true}>
+          <h2>Sample Project</h2>
+        </Span>
+    </Grid>
+  </Container>;
 
 const styles = {
   defaultContainer: {

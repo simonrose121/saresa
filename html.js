@@ -1,5 +1,5 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 
 import { prefixLink } from 'gatsby-helpers';
 import { TypographyStyle } from 'utils/typography';
@@ -12,7 +12,7 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const title = DocumentTitle.rewind();
+    let head = Helmet.rewind();
 
     let cssLink;
     let jsLink;
@@ -29,11 +29,12 @@ module.exports = React.createClass({
     return (
       <html lang="en-GB">
         <head>
+          {head.meta.toComponent()}
+          {head.title.toComponent()}
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0" />
           <meta name="google-site-verification" content="eM4qnmohZXa1mYYxBOVFMJCn_Xq_x1QkrECo2YqAisU" />
-          <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon} />
           <TypographyStyle />
           {cssLink}
