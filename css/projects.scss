@@ -26,3 +26,22 @@ p {
     color: $inlineCodeColour;
   }
 }
+
+blockquote {
+  font-style: italic;
+  color: $paragraphColour;
+  padding: 10px;
+  margin: 1.5rem 3rem;
+  border-left: 4px $inlineCodeColour solid;
+  background: darken(#ffffff, 5%);
+
+  a {
+    color: $linkColour;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $linkHoverColour;
+    }
+  }
+}
