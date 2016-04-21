@@ -16,22 +16,34 @@ const Projects = () =>
         </Span>
         <Breakpoint minWidth={768} widthMethod="componentWidth">
           <Span columns={3}>
-            <ProjectCard link="/projects/timetabled/" title="timetabled" statusType="done" status="DONE" />
+            <ProjectCard link="/projects/timetabled/" image="images/timetabled-logo.png" title="Timetabled" statusType="done" status="DONE" />
+          </Span>
+          <Span columns={3}>
+            <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
           </Span>
         </Breakpoint>
         <Breakpoint minWidth={426} maxWidth={768} widthMethod="componentWidth">
           <Span columns={4}>
             <ProjectCard link="/projects/timetabled/" title="timetabled" statusType="done" status="DONE" />
           </Span>
+          <Span columns={4}>
+            <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
+          </Span>
         </Breakpoint>
         <Breakpoint minWidth={321} maxWidth={425} widthMethod="componentWidth">
           <Span columns={6}>
             <ProjectCard link="/projects/timetabled/" title="timetabled" statusType="done" status="DONE" />
           </Span>
+          <Span columns={6}>
+            <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
+          </Span>
         </Breakpoint>
         <Breakpoint maxWidth={320} widthMethod="componentWidth">
           <Span columns={12}>
             <ProjectCard link="/projects/timetabled/" title="timetabled" statusType="done" status="DONE" />
+          </Span>
+          <Span columns={12}>
+            <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
           </Span>
         </Breakpoint>
       </Grid>

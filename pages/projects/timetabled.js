@@ -20,7 +20,7 @@ export default class ProjectsTimetabled extends React.Component {
       <DocumentTitle title={templatedTitle('Timetabled - Projects')}>
         <Container className="default-container" style={styles.defaultContainer} >
           <Grid columns={12}>
-            <h2>Timetabled</h2>
+            <h2 style={styles.header}>Timetabled</h2>
             
             <TagList tags={['node.js', 'api']} />
 
@@ -55,6 +55,9 @@ export default class ProjectsTimetabled extends React.Component {
 }
 
 const styles = {
+  header: {
+    marginBottom: '0.5rem'
+  },
   defaultContainer: {
     maxWidth: 1024,
     padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
