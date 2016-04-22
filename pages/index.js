@@ -10,7 +10,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <div>
-        <Helmet title="Home" />
+        <Helmet title="Home" meta={meta} />
         <section className="hero-container" style={styles.heroContainer}>
           <div className="hero container" style={styles.hero} >
             Software Engineer
@@ -42,6 +42,10 @@ export default class Index extends React.Component {
     );
   }
 }
+
+const meta = [
+  { "name": "description", "content": "Rowell Heria – Software Engineer. In my spare time, I like to build stuff in JavaScript. Some tech I've used: .NET, JS, Node.js, Express, React."}
+];
 
 const styles = {
   heroContainer: {
