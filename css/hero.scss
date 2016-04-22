@@ -10,7 +10,7 @@
 }
 
 .language-blurb {
-  font-size: 1.8em;
+  font-size: 1.7em;
   text-align: center;
   line-height: normal;
   margin-bottom: 1rem;
@@ -18,17 +18,20 @@
   padding: 0 50px;
 
   @media only screen and (max-width: 425px) {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 0;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 1.6em;
+    font-size: 1.4em;
     padding: 0;
   }
 }
 
 .index-languages {
+  margin-bottom: 30px;
+  overflow: hidden;
+
   .language {
     text-align: center;
     color: #ffffff;
@@ -38,13 +41,15 @@
     padding: 45px 10px;
     border-radius: 2px;
     margin-bottom: 1.69492%;
+    display: inline-block;
 
-    @media only screen and (max-width: 425px) {
+    @media only screen and (max-width: 600px) {
       font-size: 1.5em;
     }
 
-    @media only screen and (max-width: 600px) {
-      font-size: 1.6em;
+    @media only screen and (max-width: 425px) {
+      font-size: 1.3em;
+      font-weight: normal;
     }
 
     &.dot-net {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
-import { Breakpoint, Container, Grid, Span } from 'react-responsive-grid';
 import Helmet from 'react-helmet';
 
 import { rhythm } from 'utils/typography';
@@ -10,51 +9,36 @@ import '../css/hero.scss';
 export default class Index extends React.Component {
   render () {
     return (
-      <Grid columns={12}>
+      <div>
         <Helmet title="Home" />
-        <Span columns={12} last={true}>
-          <section className="hero-container" style={styles.heroContainer}>
-            <Container className="hero" style={styles.hero} >
-              Software Engineer
-            </Container>
-          </section>
-        </Span>
-        <Container className="default-container" style={styles.defaultContainer} >
-          <div className="language-blurb">
-            Below are some of the languages I have professional experience in.
+        <section className="hero-container" style={styles.heroContainer}>
+          <div className="hero container" style={styles.hero} >
+            Software Engineer
           </div>
-          <Grid columns={12} className="index-languages">
-            <Breakpoint minWidth={425} widthMethod="componentWidth">
-              <Span columns={3} className="language dot-net">
-                .NET
-              </Span>
-              <Span columns={3} className="language html">
-                HTML
-              </Span>
-              <Span columns={3} className="language css">
-                CSS
-              </Span>
-              <Span columns={3} last={true} className="language js">
-                JS
-              </Span>
-            </Breakpoint>
-            <Breakpoint maxWidth={425} widthMethod="componentWidth">
-              <Span columns={6} className="language dot-net">
-                .NET
-              </Span>
-              <Span columns={6} last={true} className="language html">
-                HTML
-              </Span>
-              <Span columns={6} className="language css">
-                CSS
-              </Span>
-              <Span columns={6} last={true} className="language js">
-                JS
-              </Span>
-            </Breakpoint>
-          </Grid>
-        </Container>
-      </Grid>
+        </section>
+        <div className="default-container" style={styles.defaultContainer} >
+          <div className="language-blurb">
+            Below are some of the technologies I have worked with in a professional capacity.
+          </div>
+          <div className="index-languages">
+            <span className="col-3-12 mobile-col-6-12 language dot-net">
+              .NET
+            </span>
+            <span className="col-3-12 mobile-col-6-12 language html">
+              HTML
+            </span>
+            <span className="col-3-12 mobile-col-6-12 language css">
+              CSS
+            </span>
+            <span className="col-3-12 mobile-col-6-12 language js">
+              JS
+            </span>
+          </div>
+          <div className="language-blurb">
+            In my spare time, I like to build stuff in JavaScript.
+          </div>
+        </div>
+      </div>
     );
   }
 }
@@ -84,8 +68,6 @@ const styles = {
     textAlign: 'center'
   },
   defaultContainer: {
-    maxWidth: 1024,
-    padding: `${rhythm(1/2)} ${rhythm(2/3)}`,
     paddingTop: 0,
     overflow: 'hidden',
     minHeight: '100vh'

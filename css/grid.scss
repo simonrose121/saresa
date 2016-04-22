@@ -1,0 +1,51 @@
+@import '~bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '~bourbon-neat/app/assets/stylesheets/_neat.scss';
+
+$gutterSize: 2.35765%;
+
+.bottom-gutter {
+  margin-bottom: $gutterSize !important;
+}
+
+.container,
+.default-container {
+  @include outer-container();
+  padding-left: $gutterSize;
+  padding-right: $gutterSize;
+}
+
+.col-3-12 {
+  @include span-columns(3);
+}
+
+.mobile-col-6-12 {
+  @media only screen and (max-width: 425px) {
+    @include span-columns(6);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.col-6-12 {
+  @include span-columns(6);
+
+  &.text-right {
+    text-align: right;
+  }
+}
+
+.mobile-col-12-12 {
+  @media only screen and (max-width: 425px) {
+    @include span-columns(12);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &.text-right {
+      text-align: left;
+    }
+  }
+}
