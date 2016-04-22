@@ -37,6 +37,29 @@ export default class Index extends React.Component {
           <div className="language-blurb">
             In my spare time, I like to build stuff in JavaScript.
           </div>
+          <div className="index-languages">
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/docker.png" alt="docker" />
+            </div>
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/eslint.png" alt="eslint" />
+            </div>
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/mongodb.png" alt="mongodb" />
+            </div>
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/nodejs.png" alt="node.js" />
+            </div>
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/react.png" alt="react" />
+            </div>
+            <div className="col-2-12 mobile-col-4-12">
+              <img src="images/sass.png" alt="sass" />
+            </div>
+          </div>
+          <div className="language-blurb text-small">
+            
+          </div>
         </div>
       </div>
     );
