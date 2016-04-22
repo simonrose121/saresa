@@ -19,9 +19,7 @@ module.exports = React.createClass({
     return (
       <div>
         <Helmet titleTemplate="%s | Rowell Heria" />
-
-        <Message type="info" text="This site is under development. Something will probably break."
-          containerStyle={{ textAlign: 'center', background: '#ffe32e' }}/>
+        
         <Headroom style={{ background: '#e74c3c' }} disable={true}>
           <div className="container" style={styles.headroomLinkContainer} >
             <Link to={prefixLink('/')} style={styles.headroomLink} >

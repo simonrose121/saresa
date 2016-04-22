@@ -27,6 +27,11 @@ p {
   }
 }
 
+.meta-data {
+  color: lighten($paragraphColour, 20%);
+  margin-bottom: 0.5em;
+}
+
 blockquote {
   font-style: italic;
   color: $paragraphColour;

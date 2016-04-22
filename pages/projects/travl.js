@@ -15,8 +15,12 @@ export default class ProjectsTravl extends React.Component {
         <Helmet title="Travl - Projects" />
 
         <h2 style={styles.header}>Travl</h2>
-
+        <p className="meta-data">Rowell Heria | April 22, 2016</p>
         <TagList tags={['react', 'react native', 'ios']} />
+        
+        <p>This project will be built using <a href="https://facebook.github.io/react-native/">React Native</a>. It is a rehash of a previous project lost due to not pushing the repository online.</p>
+
+        <p>It will take advantage of <a href="http://rowell.heria.uk/projects/timetabled/">Timetabled API</a> to provide real-time bus information.</p>
       </div>
     );
   }

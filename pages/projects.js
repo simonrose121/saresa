@@ -7,7 +7,7 @@ import { rhythm } from 'utils/typography';
 
 const Projects = () =>
   <div className="default-container" style={styles.defaultContainer} >
-    <Helmet title="Projects" />
+    <Helmet title="Projects" meta={meta} />
     <h2>Projects</h2>
 
     <div className="projects-list">
@@ -19,6 +19,10 @@ const Projects = () =>
       </div>
     </div>
   </div>;
+
+const meta = [
+  { "name": "description", "content": "Past and ongoing personal projects." }
+];
 
 const styles = {
   defaultContainer: {

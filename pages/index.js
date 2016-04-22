@@ -58,7 +58,7 @@ export default class Index extends React.Component {
             </div>
           </div>
           <div className="language-blurb text-small">
-            
+
           </div>
         </div>
       </div>
@@ -67,19 +67,17 @@ export default class Index extends React.Component {
 }
 
 const meta = [
-  { "name": "description", "content": "Rowell Heria – Software Engineer. In my spare time, I like to build stuff in JavaScript. Some tech I've used: .NET, JS, Node.js, Express, React."}
+  { "name": "description", "content": "Software Engineer. In my spare time, I like to build stuff in JavaScript. Some tech I've used: .NET, JS, Node.js, Express, React."}
 ];
 
 const styles = {
   heroContainer: {
     background: '#ff6656',
-    height: '250px',
+    padding: '1.5em 0',
     marginBottom: '1rem',
     color: '#ffffff',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: '3em'
+    fontSize: '3em',
+    overflow: 'hidden'
   },
   heroContainerSmall: {
     height: '200px',

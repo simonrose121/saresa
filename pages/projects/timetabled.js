@@ -16,11 +16,12 @@ export default class ProjectsTimetabled extends React.Component {
   render () {
     return (
       <div className="default-container" style={styles.defaultContainer} >
-        <Helmet title="Timetabled - Projects" />
+        <Helmet title="Timetabled - Projects" meta={meta} />
 
         <h2 style={styles.header}>Timetabled</h2>
+        <p className="meta-data">Rowell Heria | April 16, 2016</p>
 
-        <TagList tags={['node.js', 'api']} />
+        <TagList tags={['node.js', 'api', 'es6', 'babel', 'webpack']} />
 
         <p><strong>Timetabled</strong> is an API that provides bus/tram times for the Yorkshire region. It requires the <a href="https://data.gov.uk/dataset/naptan">NaPTAN</a> code of the stop and should return a JSON object with the details. The response you will receive will look like something below.</p>
 
@@ -49,6 +50,10 @@ export default class ProjectsTimetabled extends React.Component {
     );
   }
 }
+
+const meta = [
+  { "name": "description", "content": "Bus and tram times API. Built with Node.js and Koa." }
+];
 
 const styles = {
   header: {
