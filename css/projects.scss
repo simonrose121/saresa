@@ -53,4 +53,8 @@ blockquote {
       color: $linkHoverColour;
     }
   }
+
+  p:first-of-type {
+    margin-bottom: 0;
+  }
 }
