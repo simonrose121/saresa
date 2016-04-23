@@ -3,6 +3,8 @@ import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 
 import { rhythm } from 'utils/typography';
+import HomeImage from '../components/HomeImage';
+import HomeLanguage from '../components/HomeLanguage';
 
 import '../css/hero.scss';
 
@@ -21,41 +23,13 @@ export default class Index extends React.Component {
             Below are some of the technologies I have worked with in a professional capacity.
           </div>
           <div className="index-languages">
-            <span className="col-3-12 mobile-col-6-12 language dot-net">
-              .NET
-            </span>
-            <span className="col-3-12 mobile-col-6-12 language html">
-              HTML
-            </span>
-            <span className="col-3-12 mobile-col-6-12 language css">
-              CSS
-            </span>
-            <span className="col-3-12 mobile-col-6-12 language js">
-              JS
-            </span>
+            {languages.map((lang, i) => <HomeLanguage key={i} lang={lang.lang} langClass={lang.langClass} />)}
           </div>
           <div className="language-blurb">
             In my spare time, I like to build stuff in JavaScript.
           </div>
           <div className="index-languages">
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/docker.png" alt="docker" />
-            </div>
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/eslint.png" alt="eslint" />
-            </div>
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/mongodb.png" alt="mongodb" />
-            </div>
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/nodejs.png" alt="node.js" />
-            </div>
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/react.png" alt="react" />
-            </div>
-            <div className="col-2-12 mobile-col-4-12">
-              <img src="images/sass.png" alt="sass" />
-            </div>
+            {images.map((image, i) => <HomeImage key={i} img={image.src} alt={image.alt} />)}
           </div>
           <div className="language-blurb text-small">
 
@@ -65,6 +39,22 @@ export default class Index extends React.Component {
     );
   }
 }
+
+const images = [
+  { src: 'images/docker.png', alt: 'docker' },
+  { src: 'images/eslint.png', alt: 'eslint' },
+  { src: 'images/mongodb.png', alt: 'mongodb' },
+  { src: 'images/nodejs.png', alt: 'node.js' },
+  { src: 'images/react.png', alt: 'react' },
+  { src: 'images/sass.png', alt: 'sass' }
+];
+
+const languages = [
+  { lang: '.NET', langClass: 'dot-net' },
+  { lang: 'HTML', langClass: 'html' },
+  { lang: 'CSS', langClass: 'css' },
+  { lang: 'JS', langClass: 'js' }
+];
 
 const meta = [
   { "name": "description", "content": "Software Engineer. In my spare time, I like to build stuff in JavaScript. Some tech I've used: .NET, JS, Node.js, Express, React."}
