@@ -9,6 +9,12 @@ import HomeLanguage from '../components/HomeLanguage';
 import '../css/hero.scss';
 
 export default class Index extends React.Component {
+  componentDidMount () {
+    if (ga !== undefined) {
+      ga('send', 'pageview', this.props.location.pathname);
+    }
+  }
+
   render () {
     return (
       <div>

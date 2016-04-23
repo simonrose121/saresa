@@ -13,6 +13,12 @@ import Dockerfile from './_snippets/_dockerfile.md';
 import SrcUtilsIndex from './_snippets/_src-utils-index.md';
 
 export default class ProjectsTimetabled extends React.Component {
+  componentDidMount () {
+    if (ga !== undefined) {
+      ga('send', 'pageview', this.props.location.pathname);
+    }
+  }
+
   render () {
     return (
       <div className="default-container" style={styles.defaultContainer} >

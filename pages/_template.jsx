@@ -4,16 +4,14 @@ import { prefixLink } from 'gatsby-helpers';
 import Headroom from 'react-headroom';
 import Helmet from 'react-helmet';
 
-import Message from '../components/Message';
 import { rhythm } from 'utils/typography';
 import '../css/grid.scss';
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any
-    }
-  },
+export default class Template extends React.Component {
+  static propTypes = {
+    children: React.PropTypes.any
+  };
+
   render () {
     let copyright = `© ${new Date().getFullYear()} Rowell Heria`;
     return (
@@ -56,7 +54,7 @@ module.exports = React.createClass({
       </div>
     )
   }
-});
+};
 
 const styles = {
   headroomLinkContainer: {
