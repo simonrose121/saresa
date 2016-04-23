@@ -16,12 +16,14 @@ module.exports = React.createClass({
 
     let cssLink;
     let jsLink;
+    let analytics;
     if (process.env.NODE_ENV === 'production') {
       const date = new Date();
       const cacheBuster = `${date.getDate()}${date.getMonth()}${date.getFullYear()}`;
 
       cssLink = <link rel="stylesheet" href={prefixLink(`/styles.css?t=${cacheBuster}`)} />;
       jsLink = <script src={prefixLink(`/bundle.js?t=${cacheBuster}`)} ></script>;
+      analytics = <script src={prefixLink(`/analytics.js`)} ></script>;
     } else {
       jsLink = <script src={prefixLink(`/bundle.js`)} ></script>;
     }
@@ -43,6 +45,7 @@ module.exports = React.createClass({
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} ></div>
           {jsLink}
         </body>
+        {analytics}
       </html>
     );
   }
