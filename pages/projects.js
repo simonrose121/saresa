@@ -11,11 +11,14 @@ const Projects = () =>
     <h2>Projects</h2>
 
     <div className="projects-list">
-      <div className="col-3-12 mobile-col-6-12 bottom-gutter" columns={3}>
+      <div className="col-3-12 mobile-col-6-12 bottom-gutter" >
         <ProjectCard link="/projects/timetabled/" image="images/timetabled-logo.png" title="Timetabled" statusType="done" status="DONE" />
       </div>
-      <div className="col-3-12 mobile-col-6-12 bottom-gutter" columns={3}>
-        <ProjectCard link="/projects/travl/" title="Travl" status="WIP" />
+      <div className="col-3-12 mobile-col-6-12 bottom-gutter" >
+        <ProjectCard link="/projects/travl/" title="Travl" image="images/travl-logo.png" status="WIP" />
+      </div>
+      <div className="col-3-12 mobile-col-6-12 bottom-gutter" >
+        <ProjectCard link="/projects/culinarie/" title="Culinarie" image="images/culinarie-logo.png" statusType="done" status="DONE"  />
       </div>
     </div>
   </div>;

@@ -12,7 +12,7 @@ export default class ProjectsTravl extends React.Component {
   render () {
     return (
       <div className="default-container" style={styles.defaultContainer} >
-        <Helmet title="Travl - Projects" />
+        <Helmet title="Travl - Projects" meta={meta} />
 
         <h2 style={styles.header}>Travl</h2>
         <p className="meta-data">Rowell Heria | April 22, 2016</p>
@@ -25,6 +25,10 @@ export default class ProjectsTravl extends React.Component {
     );
   }
 }
+
+const meta = [
+
+];
 
 const styles = {
   header: {
