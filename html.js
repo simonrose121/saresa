@@ -40,12 +40,12 @@ module.exports = React.createClass({
           <link rel="shortcut icon" href={this.props.favicon} />
           <TypographyStyle />
           {cssLink}
+          {analytics}
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} ></div>
           {jsLink}
         </body>
-        {analytics}
       </html>
     );
   }
